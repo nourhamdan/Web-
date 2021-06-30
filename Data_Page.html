@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<!-- Insert title here -->
+    <title>Data on Weather by Latitude</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- javascript from w3schools to include convertcsv.html table into current page -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script> 
+</head>
+
+<body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- A black horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm navbar-blue">
+        <a class="nav-link" href="index.html">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+        </a>
+        <ul class="navbar-nav">
+            <!-- Home button -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">  
+                    Weather and Latitude</a>
+            </li>
+        </ul>
+       <!-- right side of navbar -->
+       <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown ml-auto">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink" href="#" role="button" 
+            aria-haspopup="true" aria-expanded="false">Plot</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="Temperature vs Latitude.html">Temperature</a>
+                <a class="dropdown-item" href="Humidity vs Latitude.html">Humidity</a>
+                <a class="dropdown-item" href="Cloudiness vs Latitude.html">Cloudiness</a>
+                <a class="dropdown-item" href="Windiness vs Latitude.html">Wind Speed </a>
+            </div>
+        </li> 
+        <li class="nav-item">
+            <a class="nav-link" href="Comparison_Page.html">Comparison
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Data_Page.html">Data</a>
+        </li>
+    </ul>
+    </nav>
+    <!-- Line Break -->
+    <div style="background-color:goldenrod;">
+        <div class="row">
+            <div class="col-md-12">
+                </br>
+                </br>
+            </div>
+        </div>
+    </div> <!-- ends background color -->
+
+    <!-- Header -->
+    <div class="container-fluid">
+            <div class='row align-items-center'>
+                <div class="col-md-4">
+                    </br>
+                </br>
+            </div>
+            <div class="col-lg-7">
+                <h1 class="intro"> City and Weather Data </h1>
+            </div>
+            <div class="col-md-4"> </br>
+        </div>
+        <hr> <!-- horizontal line -->
+
+        <!-- Option to view dataset in it's own window -->
+        <div class="row">
+            <div class="col-md-10">
+                <p> <a  
+                    href="resources\convertcsv.html"> Click here </a>
+                    to view just the dataset. 
+                </p> 
+            </div>
+            <div class="col-md-4">
+                </br>
+            </div>
+            <div class="col-md-4"></div>
+        </div> 
+           
+    <!-- Content: Data -->
+    <!-- *** Start table section *** -->
+    <!-- generated from http://www.convertcsv.com/csv-to-html.html with citySample_dataframe.csv-->
+
+    <!-- Import converted csv files to table-->
+    <div class="col-sm-12">
+        <div w3-include-html="resources\convertcsv.html"></div> 
+        <script>
+            w3.includeHTML();
+        </script>
+        <!-- End of table section -->
+    </div>
+    <!-- added row for spacing -->
+    <div class="row">
+        <div class="col-md-12">
+            </br> <!-- line break to push header down -->
+            <div id="bottom_space_data_pg" style="background-color:wheat;"> </div>
+        </div>
+    </div>
+
+    <!-- Visualizations -->
+        <!-- Header -->
+        <div id = "bottom_visual" class="container"> 
+            <div class="row">
+                <div class="col-md-12">
+                    </br> <!-- line break to push header down -->
+                </div>
+            </div>
+            <hr> <!-- horizontal line -->
+        <!-- Header content for visualization section -->
+        <div class="row align-items-center">
+            <div class = 'col-md-4'></br></br></br></div>
+            <div class="col-lg-4">
+                <h3 id="bot_header">Graphic Visualizations</h3>
+            </div>
+            <div class = 'col-md-4'></br></br></br></div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-3">
+                <a href="Temperature vs Latitude.html">
+                    <img class="mx-auto d-block img-fluid" src="Resources\Temperatures-n-World_Cities.png"
+                    alt = "Maximum Temperature vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="Humidity vs Latitude.html">
+                    <img class="mx-auto d-block img-fluid" src="Resources\Humidity-n-World_Cities.png"
+                    alt = "Humidity vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="Cloudiness vs Latitude.html">
+                    <img class="mx-auto d-block img-fluid" src="Resources\Cloudiness-n-World_Cities.png"
+                    alt = "Cloudiness vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="Windiness vs Latitude.html">
+                    <img class="mx-auto d-block img-fluid" src="Resources\Wind_Speed-n-World_Cities.png"
+                    alt = "Windspeed vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+        </div>
+        <hr>
+    </div> <!-- ends bootstrap container for main content -->
+</body>
+</html>
